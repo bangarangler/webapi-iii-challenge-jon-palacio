@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require("express");
 
-const db = require('../user/userDb.js')
+const db = require("../user/userDb.js");
 
-const router = express.Router()
+const router = express.Router();
 
 router.get("/:id", async (req, res) => {
   try {

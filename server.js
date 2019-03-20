@@ -1,6 +1,13 @@
 const express = require("express");
 
 const helmet = require("helmet");
+const cors = require("cors");
+
+//const corsOptions = {
+//origin: "localhost:3000/",
+//optionsSuccessStatus: 200,
+//methods: ["GET", "POST", "PUT", "DELETE"]
+//};
 
 function forceUpper(req, res, next) {
   console.log(req.method);
@@ -23,6 +30,7 @@ const server = express();
 server.use(express.json());
 server.use(forceUpper);
 server.use(helmet());
+server.use(cors());
 
 server.use("/api/posts", postRouter);
 server.use("/api/users", userRouter);
