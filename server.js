@@ -11,7 +11,7 @@ server.use(express.json());
 server.use(helmet());
 
 server.use("/api/posts", postRouter);
-//server.use("/api/users", userRouter);
+server.use("/api/users", userRouter);
 
 server.get("/", (req, res) => {
   res.send(`<h1>Hey There</h1><p>Welcome to the API</p>`);
