@@ -8,7 +8,6 @@ const user = props => {
       <Link to={`/users/${props.id}`}>
         <h2>{props.user.name}</h2>
       </Link>
-
     </React.Fragment>
   );
 };
