@@ -4,7 +4,6 @@ const db = require("./userDb.js");
 
 const router = express.Router();
 
-
 router.get("/", async (req, res) => {
   try {
     const users = await db.get(req.query);
